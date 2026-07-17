@@ -30,6 +30,8 @@ nav{position:sticky;top:0;background:var(--navy);border-bottom:3px solid var(--g
 nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
 .nav-badges{display:flex;align-items:center;gap:12px}
 .nav-badges img{height:34px;width:auto;border-radius:4px;background:#fff;padding:2px}
+.nav-name{color:#fff;font-weight:700;font-size:1rem;letter-spacing:.02em;margin-left:4px}
+@media(max-width:760px){.nav-name{display:none}}
 .nav-links{display:flex;gap:24px;font-size:.92rem}
 .nav-links a{color:#c8d4e4;text-decoration:none;font-weight:500;transition:color .2s}
 .nav-links a:hover{color:#fff}
@@ -96,6 +98,10 @@ h2{font-size:clamp(1.55rem,3.4vw,2.1rem);font-weight:800;letter-spacing:-.01em;m
 .t-dates{font-family:'JetBrains Mono',monospace;font-size:.74rem;color:var(--muted);margin-left:auto}
 .t-entry p{color:var(--muted);font-size:.92rem;margin-top:8px;max-width:840px}
 .t-entry .chips{margin-top:12px}
+.highlight{margin-top:14px;background:#fbf7ec;border:1px solid #ecdfc0;border-left:3px solid var(--gold);
+  border-radius:10px;padding:16px 20px;max-width:840px}
+.highlight h4{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:8px}
+.highlight ul{margin:0 0 0 18px;color:var(--muted);font-size:.9rem;display:flex;flex-direction:column;gap:5px}
 
 .certs{margin-top:40px;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
 .cert{background:var(--bg);border:1px solid var(--card-border);border-radius:10px;padding:16px 20px;
@@ -144,6 +150,7 @@ footer{border-top:1px solid var(--card-border);padding:30px 0;color:var(--muted)
     <div class="nav-badges">
       <img src="microsoftcertlogo.png" alt="Microsoft Certified: Azure Fundamentals">
       <img src="ibmcertlogo.jpeg" alt="Certified for IBM WebSphere">
+      <span class="nav-name">Shashikanth Sharma</span>
     </div>
     <div class="nav-links">
       <a href="#projects">Projects</a>
@@ -264,8 +271,19 @@ footer{border-top:1px solid var(--card-border);padding:30px 0;color:var(--muted)
       <div class="timeline">
         <div class="t-entry reveal">
           <div class="t-head"><h3>Lead Software Engineer / Vice President</h3><span class="t-company">Wells Fargo Bank</span><span class="t-dates">Nov 2019 — Present · Charlotte, NC</span></div>
-          <p>Global Payment Broker team for one of the largest US banks. Led the ISO 20022 migration and a multi-year tech refresh of mission-critical payment middleware (FTM, IBM App Connect, zOS DB). Built interfaces to CHIPS, ACH, Fedwire, and Global Sanctions systems; orchestrated event-driven workflows bridging REST APIs and Kafka. Designed and built an AI-powered Enterprise Integration Agent (Anthropic API) that autonomously diagnoses IBM MQ failures from transaction logs and recommends fixes — cutting manual intervention and speeding root-cause analysis.</p>
-          <div class="chips"><span class="chip">ISO 20022</span><span class="chip">IBM ACE / FTM</span><span class="chip">Kafka</span><span class="chip">AI Agents</span><span class="chip">Payments</span><span class="chip">L3 Support</span></div>
+          <p>Global Payment Broker team for one of the largest US banks. Led the ISO 20022 migration and a multi-year tech refresh of mission-critical payment middleware (FTM, IBM App Connect, zOS DB). Built interfaces to CHIPS, ACH, Fedwire, and Global Sanctions systems; orchestrated event-driven workflows bridging REST APIs and Kafka; L3 production support for critical financial middleware.</p>
+          <div class="highlight">
+            <h4>Key contribution — AI-Powered Enterprise Integration Agent</h4>
+            <ul>
+              <li>Built an AI agent (Anthropic API) that autonomously diagnoses IBM MQ failures, identifies root causes from transaction logs, and recommends or applies corrective fixes with minimal human input</li>
+              <li>Real-time transaction status lookup with cross-environment comparison across two database instances — engineers reconcile discrepancies instantly</li>
+              <li>Automated file management for regression and module testing: copying test files to target servers, renaming, and WMQH file preparation</li>
+              <li>Alert and reporting engine surfacing actionable insights from queue and flow health checks, improving incident response time</li>
+              <li>Developer utility suite — ASCII conversion tools, optimized query execution — raising day-to-day engineering efficiency</li>
+              <li>Extensible tool architecture: new capabilities added incrementally without disrupting existing workflows</li>
+            </ul>
+          </div>
+          <div class="chips"><span class="chip">ISO 20022</span><span class="chip">IBM ACE / FTM</span><span class="chip">Kafka</span><span class="chip">AI Agents</span><span class="chip">Python / pymqi</span><span class="chip">Payments</span><span class="chip">L3 Support</span></div>
         </div>
 
         <div class="t-entry reveal">
