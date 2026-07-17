@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SK Sharma — Software · Cloud · AI Engineer</title>
+<meta name="description" content="SK Sharma — Software Engineer building intelligent software that solves real-world business problems. Cloud, AI, and enterprise solutions.">
+<meta property="og:title" content="SK Sharma — Software · Cloud · AI Engineer">
+<meta property="og:description" content="Building intelligent software that solves real-world business problems.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0e17;--bg2:#0d1220;--card:rgba(255,255,255,.035);--card-border:rgba(255,255,255,.08);
+  --text:#e8ecf4;--muted:#94a0b8;--accent:#6ea8fe;--accent2:#9d7bfe;--green:#4ade80;
+  --chip:rgba(110,168,254,.12);--chip-text:#9ec2ff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background:
+  radial-gradient(600px 400px at 85% -10%,rgba(157,123,254,.14),transparent 60%),
+  radial-gradient(700px 500px at -10% 30%,rgba(110,168,254,.10),transparent 60%),
+  radial-gradient(500px 400px at 60% 110%,rgba(74,222,128,.05),transparent 60%);
+  pointer-events:none;z-index:0}
+main,nav,footer{position:relative;z-index:1}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+
+nav{position:sticky;top:0;backdrop-filter:blur(14px);background:rgba(10,14,23,.72);
+  border-bottom:1px solid rgba(255,255,255,.06);z-index:50}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-weight:800;letter-spacing:.5px;font-size:1.05rem}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:26px;font-size:.92rem}
+.nav-links a{color:var(--muted);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+
+.hero{padding:110px 0 90px;text-align:left}
+.hero h1{font-size:clamp(2.4rem,6vw,4rem);font-weight:800;letter-spacing:-.02em;line-height:1.08}
+.roles{margin-top:14px;display:flex;flex-wrap:wrap;gap:10px 14px;color:var(--muted);font-weight:500;font-size:1.02rem}
+.roles span{display:flex;align-items:center;gap:14px}
+.roles span:not(:last-child)::after{content:'·';color:var(--accent);font-weight:800}
+.tagline{margin-top:26px;font-size:clamp(1.05rem,2.4vw,1.3rem);color:var(--muted);max-width:560px}
+.tagline b{color:var(--text);font-weight:600}
+.cta{margin-top:38px;display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:10px;font-weight:600;
+  font-size:.95rem;text-decoration:none;transition:transform .15s,box-shadow .15s,background .2s;border:1px solid transparent}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#0a0e17;box-shadow:0 8px 30px rgba(110,168,254,.25)}
+.btn-ghost{background:var(--card);border-color:var(--card-border);color:var(--text)}
+.btn-ghost:hover{background:rgba(255,255,255,.07)}
+
+section{padding:80px 0}
+.sec-label{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--accent);letter-spacing:.18em;text-transform:uppercase}
+h2{font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:800;letter-spacing:-.01em;margin-top:8px}
+.sec-sub{color:var(--muted);margin-top:10px;max-width:640px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:20px;margin-top:44px}
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:26px;
+  backdrop-filter:blur(8px);display:flex;flex-direction:column;gap:14px;
+  transition:transform .2s,border-color .2s,background .2s}
+.card:hover{transform:translateY(-4px);border-color:rgba(110,168,254,.35);background:rgba(255,255,255,.05)}
+.card h3{font-size:1.15rem;font-weight:700}
+.card p{color:var(--muted);font-size:.93rem;flex-grow:1}
+.live-dot{display:inline-flex;align-items:center;gap:6px;font-size:.75rem;color:var(--green);font-weight:600;letter-spacing:.05em}
+.live-dot::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--green);
+  box-shadow:0 0 8px var(--green);animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.4}}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{background:var(--chip);color:var(--chip-text);font-size:.74rem;font-weight:500;
+  padding:4px 10px;border-radius:99px;font-family:'JetBrains Mono',monospace}
+.card-links{display:flex;gap:16px;font-size:.9rem;font-weight:600;padding-top:4px}
+.card-links a{color:var(--accent);text-decoration:none}
+.card-links a:hover{text-decoration:underline}
+.demo-note{margin-top:26px;color:var(--muted);font-size:.85rem}
+
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px;margin-top:44px}
+.skill-group{background:var(--card);border:1px solid var(--card-border);border-radius:14px;padding:22px}
+.skill-group h4{font-size:.95rem;font-weight:700;margin-bottom:12px;color:var(--accent)}
+.skill-group ul{list-style:none;color:var(--muted);font-size:.9rem;display:flex;flex-direction:column;gap:6px}
+
+.contact-card{margin-top:44px;background:var(--card);border:1px solid var(--card-border);border-radius:18px;
+  padding:44px;text-align:center}
+.contact-card p{color:var(--muted);max-width:480px;margin:12px auto 0}
+.contact-links{margin-top:30px;display:flex;justify-content:center;flex-wrap:wrap;gap:14px}
+
+footer{border-top:1px solid rgba(255,255,255,.06);padding:34px 0;color:var(--muted);font-size:.85rem;text-align:center}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:640px){.nav-links{display:none}.hero{padding:70px 0 60px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">SK<span>.</span></div>
+    <div class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a href="https://github.com/sksharmar1" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <header class="hero wrap">
+    <h1>SK Sharma</h1>
+    <div class="roles">
+      <span>Software Engineer</span><span>Cloud Engineer</span><span>AI Engineer</span><span>Enterprise Solutions</span>
+    </div>
+    <p class="tagline">Building <b>intelligent software</b> that solves real-world business problems — from AI-powered platforms to multi-cloud security tooling.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#projects">View Projects</a>
+      <a class="btn btn-ghost" href="https://github.com/sksharmar1" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/sksharmas" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </header>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="sec-label reveal">Recent Work</div>
+      <h2 class="reveal">Projects — live and running</h2>
+      <p class="sec-sub reveal">Every project below is deployed and publicly accessible. Click through and try them.</p>
+
+      <div class="grid">
+        <div class="card reveal">
+          <span class="live-dot">LIVE</span>
+          <h3>ResumeAI</h3>
+          <p>AI resume platform: upload a resume, get structured parsing via a two-pass Claude pipeline with truncation-safe JSON repair, semantic job matching with vector embeddings, and async processing.</p>
+          <div class="chips">
+            <span class="chip">FastAPI</span><span class="chip">Celery</span><span class="chip">PostgreSQL + pgvector</span>
+            <span class="chip">Redis</span><span class="chip">React</span><span class="chip">Claude API</span>
+          </div>
+          <div class="card-links"><a href="https://resumeai-web.onrender.com" target="_blank" rel="noopener">Live Demo →</a></div>
+        </div>
+
+        <div class="card reveal">
+          <span class="live-dot">LIVE</span>
+          <h3>Cloud Security Dashboard</h3>
+          <p>Multi-tenant cloud security posture management. Scans AWS, Azure, and GCP for misconfigurations — open security groups, excessive IAM, unencrypted storage — with AI-generated remediation plans.</p>
+          <div class="chips">
+            <span class="chip">Spring Boot</span><span class="chip">Java 17</span><span class="chip">AWS · Azure · GCP SDKs</span>
+            <span class="chip">React + Vite</span><span class="chip">Claude API</span>
+          </div>
+          <div class="card-links"><a href="https://cloud-security-dashboard-web.onrender.com" target="_blank" rel="noopener">Live Demo →</a></div>
+        </div>
+
+        <div class="card reveal">
+          <span class="live-dot">LIVE</span>
+          <h3>AI Content Curator</h3>
+          <p>Event-driven microservices platform for self-directed learners: RSS ingestion, TF-IDF recommendations, VADER sentiment analytics — 5 Spring Boot services + a Python ML service behind an API gateway.</p>
+          <div class="chips">
+            <span class="chip">Microservices</span><span class="chip">Spring Cloud Gateway</span><span class="chip">Java 21</span>
+            <span class="chip">Flask</span><span class="chip">scikit-learn</span><span class="chip">DDD / Hexagonal</span>
+          </div>
+          <div class="card-links"><a href="https://cc-frontend-bwlg.onrender.com" target="_blank" rel="noopener">Live Demo →</a></div>
+        </div>
+
+        <div class="card reveal">
+          <span class="live-dot">LIVE</span>
+          <h3>AetherForge Voice Agent</h3>
+          <p>Production AI customer-service and BDR voice agent: real-time call handling with Twilio, Claude-powered conversation, lead qualification, callback scheduling, and CRM logging.</p>
+          <div class="chips">
+            <span class="chip">FastAPI</span><span class="chip">Twilio Voice</span><span class="chip">Claude API</span>
+            <span class="chip">Supabase</span><span class="chip">Docker</span>
+          </div>
+          <div class="card-links">
+            <a href="https://aetherforge-service-agent.onrender.com" target="_blank" rel="noopener">Live Demo →</a>
+            <a href="https://github.com/sksharmar1/aetherforge" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <span class="live-dot">LIVE</span>
+          <h3>AI Finance Tracker</h3>
+          <p>Personal finance platform with ML-powered expense categorization (95% confidence predictions), JWT auth, household sharing, receipt scanning, and AI chat over your spending data.</p>
+          <div class="chips">
+            <span class="chip">Flask</span><span class="chip">PostgreSQL</span><span class="chip">scikit-learn</span>
+            <span class="chip">React + TypeScript</span><span class="chip">Tailwind</span>
+          </div>
+          <div class="card-links">
+            <a href="https://finance-tracker-frontend-afy8.onrender.com" target="_blank" rel="noopener">Live Demo →</a>
+            <a href="https://github.com/sksharmar1/finance-tracker" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <p class="demo-note">Demos run on free-tier infrastructure — first load after idle can take a minute while services wake up.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="sec-label reveal">Toolbox</div>
+      <h2 class="reveal">Skills &amp; Technologies</h2>
+      <div class="skills-grid">
+        <div class="skill-group reveal">
+          <h4>Backend</h4>
+          <ul><li>Java · Spring Boot · Spring Cloud</li><li>Python · FastAPI · Flask · Celery</li><li>REST APIs · Microservices · DDD</li></ul>
+        </div>
+        <div class="skill-group reveal">
+          <h4>Frontend</h4>
+          <ul><li>React · TypeScript</li><li>Vite · Tailwind CSS</li><li>Responsive, accessible UI</li></ul>
+        </div>
+        <div class="skill-group reveal">
+          <h4>AI &amp; ML</h4>
+          <ul><li>Claude API · LLM pipelines · RAG</li><li>Vector search (pgvector)</li><li>scikit-learn · TF-IDF · sentiment</li></ul>
+        </div>
+        <div class="skill-group reveal">
+          <h4>Cloud &amp; Data</h4>
+          <ul><li>AWS · Azure · GCP</li><li>PostgreSQL · Redis · IBM DB2</li><li>Docker · CI/CD · GitHub Actions</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-card reveal">
+        <div class="sec-label">Get in touch</div>
+        <h2>Let's build something</h2>
+        <p>Open to conversations about engineering roles, consulting, and interesting problems.</p>
+        <div class="contact-links">
+          <a class="btn btn-primary" href="mailto:sksharmar1@gmail.com">Email Me</a>
+          <a class="btn btn-ghost" href="https://github.com/sksharmar1" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/sksharmas" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="yr"></span> SK Sharma · Built and deployed with care</div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
